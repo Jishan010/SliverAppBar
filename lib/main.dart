@@ -72,148 +72,65 @@ class _MyHomePageState extends State<MyHomePage> {
           SliverToBoxAdapter(
             child: Column(
               children: [
-                Container(
-                  height: 180.0,
-                  width: double.infinity,
-                  margin: EdgeInsets.all(16),
-                  child: Card(
-                    shape: RoundedRectangleBorder(),
-                    child: Column(
-                      children: [
-                        Container(
-                            alignment: Alignment.centerLeft,
-                            margin: EdgeInsets.only(left: 16, top: 20),
-                            child: Text('Contact',
-                                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold))),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 16, top: 16),
-                          child: Row(
-                            children: [
-                              Icon(
-                                Icons.mail_outline,
-                              ),
-                              SizedBox(
-                                width: 12,
-                              ),
-                              Text('jishan010@gmail.com', style: TextStyle(fontSize: 14.0))
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 16, top: 16),
-                          child: Row(
-                            children: [
-                              Icon(Icons.phone_outlined),
-                              SizedBox(
-                                width: 12,
-                              ),
-                              Text('+91 9970 655757', style: TextStyle(fontSize: 14.0))
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 16, top: 16),
-                          child: Row(
-                            children: [
-                              Icon(Icons.location_on_outlined),
-                              SizedBox(
-                                width: 12,
-                              ),
-                              Text('Mumbai IND', style: TextStyle(fontSize: 14.0))
-                            ],
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-                Container(
-                    height: 332.0,
-                    margin: EdgeInsets.only(left: 16, right: 16),
+                SizedBox(
+                    height: 200.0,
                     width: double.infinity,
                     child: Card(
-                      shape: RoundedRectangleBorder(),
-                      child: Column(
-                        children: [
-                          Container(
-                              alignment: Alignment.centerLeft,
-                              margin: EdgeInsets.only(left: 16, top: 20),
-                              child: Text('My Information',
-                                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold))),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 16, top: 16),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.stretch,
-                              children: [
-                                Text('Designation', style: TextStyle(fontSize: 12.0)),
-                                SizedBox(
-                                  width: 12,
-                                  height: 4,
+                      color: Colors.red,
+                      margin: EdgeInsets.all(16),
+                      child: Padding(
+                        padding: EdgeInsets.only(left: 16, right: 16),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(top: 20),
+                              child: Text(
+                                'Contact',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
                                 ),
-                                Text('Softwere Engineer', style: TextStyle(fontSize: 14.0))
-                              ],
+                              ),
                             ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 16, top: 16),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.stretch,
-                              children: [
-                                Text('Employee ID', style: TextStyle(fontSize: 12.0)),
-                                SizedBox(
-                                  width: 12,
-                                  height: 4,
-                                ),
-                                Text('SR13455', style: TextStyle(fontSize: 14.0))
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 16, top: 16),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.stretch,
-                              children: [
-                                Text('Division', style: TextStyle(fontSize: 12.0)),
-                                SizedBox(
-                                  width: 12,
-                                  height: 4,
-                                ),
-                                Text('GTO', style: TextStyle(fontSize: 14.0))
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 16, top: 16),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.stretch,
-                              children: [
-                                Text('Employee Type', style: TextStyle(fontSize: 12.0)),
-                                SizedBox(
-                                  width: 12,
-                                  height: 4,
-                                ),
-                                Text('Contractor', style: TextStyle(fontSize: 14.0))
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 16, top: 16),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.stretch,
-                              children: [
-                                Text('Manager Name', style: TextStyle(fontSize: 12.0)),
-                                SizedBox(
-                                  width: 12,
-                                  height: 4,
-                                ),
-                                Text('John Doe', style: TextStyle(fontSize: 14.0))
-                              ],
-                            ),
-                          ),
-                        ],
+                            SizedBox(height: 16),
+                            myContactWidget(icon: Icons.email, value: 'johndoe@example.com'),
+                            SizedBox(height: 12),
+                            myContactWidget(icon: Icons.phone, value: '(123) 456-7890'),
+                            SizedBox(height: 12),
+                            myContactWidget(
+                                icon: Icons.location_on, value: '123 Main St, Anytown USA'),
+                          ],
+                        ),
                       ),
                     )),
                 Container(
+                    height: 350.0,
+                    width: double.infinity,
+                    child: Card(
+                      color: Colors.green,
+                      margin: EdgeInsets.all(16),
+                      shape: RoundedRectangleBorder(),
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('My Information',
+                                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                            SizedBox(
+                              height: 16,
+                            ),
+                            myInformationWidget(label: 'Designation', value: 'Softwere Engineer'),
+                            myInformationWidget(label: 'Employee ID', value: 'SR13455'),
+                            myInformationWidget(label: 'Division', value: 'GTO'),
+                            myInformationWidget(label: 'Employee Type', value: 'Contractor'),
+                            myInformationWidget(label: 'Manager Name', value: 'John Doe'),
+                          ],
+                        ),
+                      ),
+                    )),
+                SizedBox(
                   height: 155.0,
                   width: double.infinity,
                   child: Card(
@@ -226,6 +143,32 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
       // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+
+  Widget myContactWidget({required IconData icon, required String value}) {
+    return Row(
+      children: [
+        Icon(icon),
+        SizedBox(width: 12),
+        Text(value),
+      ],
+    );
+  }
+
+  Widget myInformationWidget({required String label, required String value}) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(label, style: TextStyle(fontSize: 12.0)),
+        SizedBox(
+          height: 4,
+        ),
+        Text(value, style: TextStyle(fontSize: 14.0)),
+        SizedBox(
+          height: 16,
+        )
+      ],
     );
   }
 }
