@@ -94,11 +94,11 @@ class _MyHomePageState extends State<MyHomePage> {
                               ),
                             ),
                             SizedBox(height: 16),
-                            myContactWidget(icon: Icons.email, value: 'johndoe@example.com'),
+                            contactRowWidget(icon: Icons.email, value: 'johndoe@example.com'),
                             SizedBox(height: 12),
-                            myContactWidget(icon: Icons.phone, value: '(123) 456-7890'),
+                            contactRowWidget(icon: Icons.phone, value: '(123) 456-7890'),
                             SizedBox(height: 12),
-                            myContactWidget(
+                            contactRowWidget(
                                 icon: Icons.location_on, value: '123 Main St, Anytown USA'),
                           ],
                         ),
@@ -110,7 +110,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: Card(
                       color: Colors.green,
                       margin: EdgeInsets.all(16),
-                      shape: RoundedRectangleBorder(),
                       child: Padding(
                         padding: const EdgeInsets.all(16.0),
                         child: Column(
@@ -121,11 +120,12 @@ class _MyHomePageState extends State<MyHomePage> {
                             SizedBox(
                               height: 16,
                             ),
-                            myInformationWidget(label: 'Designation', value: 'Softwere Engineer'),
-                            myInformationWidget(label: 'Employee ID', value: 'SR13455'),
-                            myInformationWidget(label: 'Division', value: 'GTO'),
-                            myInformationWidget(label: 'Employee Type', value: 'Contractor'),
-                            myInformationWidget(label: 'Manager Name', value: 'John Doe'),
+                            informationColumnWidget(
+                                label: 'Designation', value: 'Softwere Engineer'),
+                            informationColumnWidget(label: 'Employee ID', value: 'SR13455'),
+                            informationColumnWidget(label: 'Division', value: 'GTO'),
+                            informationColumnWidget(label: 'Employee Type', value: 'Contractor'),
+                            informationColumnWidget(label: 'Manager Name', value: 'John Doe'),
                           ],
                         ),
                       ),
@@ -146,7 +146,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  Widget myContactWidget({required IconData icon, required String value}) {
+  Widget contactRowWidget({required IconData icon, required String value}) {
     return Row(
       children: [
         Icon(icon),
@@ -156,7 +156,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  Widget myInformationWidget({required String label, required String value}) {
+  Widget informationColumnWidget({required String label, required String value}) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
