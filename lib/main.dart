@@ -41,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             titleSpacing: 0,
             pinned: true,
-            expandedHeight: SizeCalculator.getComponentHeight(context, 0.335),
+            expandedHeight: SizeCalculator.getAvailableScreenHeight(context, 0.375),
             flexibleSpace: FlexibleSpaceBar(
               background: Container(
                 color: Colors.white,
@@ -74,7 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Column(
               children: [
                 SizedBox(
-                    height: SizeCalculator.getComponentHeight(context, 0.260),
+                    height: SizeCalculator.getAvailableScreenHeight(context, 0.300),
                     width: double.infinity,
                     child: Card(
                       color: Colors.red,
@@ -106,7 +106,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     )),
                 SizedBox(
-                    height: SizeCalculator.getComponentHeight(context, 0.440),
+                    height: SizeCalculator.getAvailableScreenHeight(context, 0.490),
                     width: double.infinity,
                     child: Card(
                       color: Colors.green,
@@ -135,7 +135,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     )),
                 SizedBox(
-                  height: SizeCalculator.getComponentHeight(context, 0.225),
+                  height: SizeCalculator.getAvailableScreenHeight(context, 0.240),
                   width: double.infinity,
                   child: Card(
                     shape: RoundedRectangleBorder(),

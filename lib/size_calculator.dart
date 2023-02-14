@@ -37,4 +37,24 @@ class SizeCalculator {
   static double getComponentWidth(BuildContext context, double value) {
     return getDeviceWidth(context) * value;
   }
+
+  /// Returns the height of the screen available for content, accounting for
+  /// the height of the status bar and top bar.
+  static double getAvailableScreenHeight(BuildContext context, double value) {
+    // Get the height of the status bar.
+    final double statusBarHeight = MediaQuery.of(context).padding.top;
+
+    // Get the height of the top bar (i.e., app bar).
+    const double topBarHeight = kToolbarHeight;
+
+    // Get the total height of the screen.
+    final double screenHeight = MediaQuery.of(context).size.height;
+
+    // Calculate the available height for content by subtracting the status bar
+    // and top bar heights from the screen height.
+    final double availableHeight = screenHeight - statusBarHeight - topBarHeight;
+
+    // Return the fraction of the available height requested by the caller.
+    return availableHeight * value;
+  }
 }
