@@ -85,12 +85,13 @@ class _MyHomePageState extends State<MyHomePage> {
                             margin: EdgeInsets.only(left: 16, top: 20),
                             child: Text('Contact',
                                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold))),
-                        Container(
-                          alignment: Alignment.centerLeft,
-                          margin: EdgeInsets.only(left: 16, top: 16),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 16, top: 16),
                           child: Row(
                             children: [
-                              Icon(Icons.mail_outline),
+                              Icon(
+                                Icons.mail_outline,
+                              ),
                               SizedBox(
                                 width: 12,
                               ),
@@ -98,9 +99,8 @@ class _MyHomePageState extends State<MyHomePage> {
                             ],
                           ),
                         ),
-                        Container(
-                          alignment: Alignment.centerLeft,
-                          margin: EdgeInsets.only(left: 16, top: 16),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 16, top: 16),
                           child: Row(
                             children: [
                               Icon(Icons.phone_outlined),
@@ -111,9 +111,8 @@ class _MyHomePageState extends State<MyHomePage> {
                             ],
                           ),
                         ),
-                        Container(
-                          alignment: Alignment.centerLeft,
-                          margin: EdgeInsets.only(left: 16, top: 16),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 16, top: 16),
                           child: Row(
                             children: [
                               Icon(Icons.location_on_outlined),
@@ -141,94 +140,73 @@ class _MyHomePageState extends State<MyHomePage> {
                               margin: EdgeInsets.only(left: 16, top: 20),
                               child: Text('My Information',
                                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold))),
-                          Container(
-                            alignment: Alignment.centerLeft,
-                            margin: EdgeInsets.only(left: 16, top: 16),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 16, top: 16),
                             child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
                               children: [
-                                Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Text('Designation', style: TextStyle(fontSize: 12.0))),
+                                Text('Designation', style: TextStyle(fontSize: 12.0)),
                                 SizedBox(
                                   width: 12,
                                   height: 4,
                                 ),
-                                Align(
-                                    alignment: Alignment.centerLeft,
-                                    child:
-                                        Text('Softwere Engineer', style: TextStyle(fontSize: 14.0)))
+                                Text('Softwere Engineer', style: TextStyle(fontSize: 14.0))
                               ],
                             ),
                           ),
-                          Container(
-                            alignment: Alignment.centerLeft,
-                            margin: EdgeInsets.only(left: 16, top: 16),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 16, top: 16),
                             child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
                               children: [
-                                Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Text('Employee ID', style: TextStyle(fontSize: 12.0))),
+                                Text('Employee ID', style: TextStyle(fontSize: 12.0)),
                                 SizedBox(
                                   width: 12,
                                   height: 4,
                                 ),
-                                Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Text('SR13455', style: TextStyle(fontSize: 14.0)))
+                                Text('SR13455', style: TextStyle(fontSize: 14.0))
                               ],
                             ),
                           ),
-                          Container(
-                            alignment: Alignment.centerLeft,
-                            margin: EdgeInsets.only(left: 16, top: 16),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 16, top: 16),
                             child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
                               children: [
-                                Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Text('Division', style: TextStyle(fontSize: 12.0))),
+                                Text('Division', style: TextStyle(fontSize: 12.0)),
                                 SizedBox(
                                   width: 12,
                                   height: 4,
                                 ),
-                                Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Text('GTO', style: TextStyle(fontSize: 14.0)))
+                                Text('GTO', style: TextStyle(fontSize: 14.0))
                               ],
                             ),
                           ),
-                          Container(
-                            alignment: Alignment.centerLeft,
-                            margin: EdgeInsets.only(left: 16, top: 16),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 16, top: 16),
                             child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
                               children: [
-                                Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Text('Employee Type', style: TextStyle(fontSize: 12.0))),
+                                Text('Employee Type', style: TextStyle(fontSize: 12.0)),
                                 SizedBox(
                                   width: 12,
                                   height: 4,
                                 ),
-                                Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Text('Contractor', style: TextStyle(fontSize: 14.0)))
+                                Text('Contractor', style: TextStyle(fontSize: 14.0))
                               ],
                             ),
                           ),
-                          Container(
-                            alignment: Alignment.centerLeft,
-                            margin: EdgeInsets.only(left: 16, top: 16),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 16, top: 16),
                             child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
                               children: [
-                                Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Text('Manager Name', style: TextStyle(fontSize: 12.0))),
+                                Text('Manager Name', style: TextStyle(fontSize: 12.0)),
                                 SizedBox(
                                   width: 12,
                                   height: 4,
                                 ),
-                                Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Text('John Doe', style: TextStyle(fontSize: 14.0)))
+                                Text('John Doe', style: TextStyle(fontSize: 14.0))
                               ],
                             ),
                           ),
