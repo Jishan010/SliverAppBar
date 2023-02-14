@@ -105,12 +105,12 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                       ),
                     )),
-                Container(
+                SizedBox(
                     height: SizeCalculator.getComponentHeight(context, 0.440),
                     width: double.infinity,
                     child: Card(
                       color: Colors.green,
-                      margin: EdgeInsets.all(16),
+                      margin: EdgeInsets.only(left: 16, right: 16, bottom: 16),
                       child: Padding(
                         padding: EdgeInsets.only(left: 16, right: 16),
                         child: Column(
@@ -135,7 +135,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     )),
                 SizedBox(
-                  height: SizeCalculator.getComponentHeight(context, 0.190),
+                  height: SizeCalculator.getComponentHeight(context, 0.225),
                   width: double.infinity,
                   child: Card(
                     shape: RoundedRectangleBorder(),
