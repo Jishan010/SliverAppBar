@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:silverbar_poc/size_calculator.dart';
 
 void main() {
   runApp(const MyApp());
@@ -40,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             titleSpacing: 0,
             pinned: true,
-            expandedHeight: 300,
+            expandedHeight: SizeCalculator.getComponentHeight(context, 0.335),
             flexibleSpace: FlexibleSpaceBar(
               background: Container(
                 color: Colors.white,
@@ -73,7 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Column(
               children: [
                 SizedBox(
-                    height: 200.0,
+                    height: SizeCalculator.getComponentHeight(context, 0.260),
                     width: double.infinity,
                     child: Card(
                       color: Colors.red,
@@ -105,18 +106,21 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     )),
                 Container(
-                    height: 350.0,
+                    height: SizeCalculator.getComponentHeight(context, 0.440),
                     width: double.infinity,
                     child: Card(
                       color: Colors.green,
                       margin: EdgeInsets.all(16),
                       child: Padding(
-                        padding: const EdgeInsets.all(16.0),
+                        padding: EdgeInsets.only(left: 16, right: 16),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('My Information',
-                                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 20.0),
+                              child: Text('My Information',
+                                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                            ),
                             SizedBox(
                               height: 16,
                             ),
@@ -131,7 +135,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     )),
                 SizedBox(
-                  height: 155.0,
+                  height: SizeCalculator.getComponentHeight(context, 0.190),
                   width: double.infinity,
                   child: Card(
                     shape: RoundedRectangleBorder(),
